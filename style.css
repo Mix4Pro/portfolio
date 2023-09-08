@@ -1,0 +1,396 @@
+:root{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    padding: 0 4%;
+}
+
+.intro{
+    text-align: center;
+    padding: 2% 0;
+    font-size: 30px;
+}
+
+.intro p{
+    display: inline-block;
+    position: relative;
+}
+
+.intro p:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #00FFFF;
+}
+
+/* ---------------------------------section-name-------------------------  */
+
+.section-name{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    height: 10svh;
+}
+
+/* -----------------------------animate-observe----------------------------- */
+
+.animate-v{
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.animate-h-l{
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.animate-h-r{
+    transform: translateX(100%);
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+    transition: 1s;
+    transform: translateY(0);
+    transform: translateX(0);
+}
+
+/* -----------------------------header------------------------------- */
+
+header{
+    width: 100%;
+    height: 100svh;
+    position: relative;
+}
+
+.header-bg{
+    height: 100svh;
+    width: 100%;
+    background: url(./imgs/header-back.jpg);
+    background-color: black;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(50%);
+    z-index: -3;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 25% 0 25%;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.links a{
+    position: relative;
+}
+
+.links a:after{
+    display: block;
+    opacity: 0;
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    bottom: 0;
+    transition: 250ms;
+}
+
+.links a:hover:after{
+    opacity: 1;
+}
+
+.main-bio{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    height: 90%;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.bio{
+    display: inline-block;
+    text-align: left;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#greeting{
+    font-family: 'Pacifico';
+    color: #00FFFF;
+    font-size: 60px;
+}
+
+#name{
+    color: #00FFC1;
+}
+
+
+/* --------------------------------------About me-------------------------  */
+#about-me{
+    box-sizing: border-box;
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.about-me-bg{
+    width: 100%;
+    height: 100%;
+    background: url(imgs/wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(40%);
+    position: absolute;
+    z-index: -3;
+}
+
+.about-me-info{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    justify-content: center;
+}
+
+.about-me-text{
+    width: 60%;
+    border: 1px solid;
+    padding: 3%;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+.about-me-text a{
+    color: #00FFFF;
+}
+
+/* --------------------------------Hard skills--------------------------- */
+
+#h-skills{
+    height: 100svh;
+    width: 100%;
+    position: relative;
+}
+
+.h-skills-bg{
+    width: 100%;
+    height: 100%;
+    background: url(imgs/pxfuel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(50%);
+    position: absolute;
+    z-index: -3;
+}
+
+.h-skills-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70svh;
+    padding: 0 15%;
+}
+
+.h-title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.h-skills-list a{
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* ------------------------------------------Soft Skills--------------------------- */
+
+#s-skills{
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+.s-skills-bg{
+    width: 100%;
+    height: 100%;
+    background: url(imgs/download.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(50%);
+    position: absolute;
+    z-index: -3;
+}
+
+.s-skills-div-list{
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    height: 70svh;
+    padding: 0 15%;
+}
+
+.s-skills-info{
+    display: grid;
+    height: 100%;
+    align-content: center;
+    grid-template-rows: 20% 20% 20% 20%;
+}
+
+.s-skills-p{
+    font-size: 20px;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.s-skills-logo{
+    display: grid;
+    align-content: center;
+}
+
+.s-skills-logo p{
+    font-family: 'Pacifico';
+    color: #00FFFF;
+    font-size: 60px;
+    text-align: right;
+}
+
+/* -------------------------------------Projects--------------------------- */
+
+#projects{
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+.projects-bg{
+    width: 100%;
+    height: 100%;
+    background: url(imgs/download2.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(50%);
+    position: absolute;
+    z-index: -3;
+}
+
+.projects-list{
+    height: 70svh;
+    display: grid;
+    align-content: center;
+    padding: 0 15%;
+}
+
+.in-projects{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 40svh;
+    column-gap: 20%;
+    text-align: center;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 5%;
+    overflow: hidden;
+}
+
+.project img{
+    filter: brightness(40%);
+    height: 70%;
+    transition: 500ms;
+}
+
+.project img:hover{
+    filter: brightness(100%);
+    transition: 500ms;
+}
+
+@media screen and (max-width: 750px){
+    .links{
+        padding: 1% 10% 1% 10%;
+    }
+
+    .h-skills-div{
+        padding: 0 10%;
+    }
+
+    .s-skills-div-list{
+        padding: 0 10%;
+    }
+
+    .projects-list{
+        padding: 0 10%;
+    }
+
+    .in-projects{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 40svh;
+        column-gap: 10%;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .h-skills-div{
+        padding: 0 5%;
+    }
+
+    .s-skills-div-list{
+        padding: 0 5%;
+    }
+
+    .projects-list{
+        padding: 0 5%;
+    }
+
+    .in-projects{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 40svh;
+        column-gap: 10%;
+    }
+}
