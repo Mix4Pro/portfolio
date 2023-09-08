@@ -374,10 +374,85 @@ header{
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
 
     .h-skills-div{
         padding: 0 5%;
+    }
+
+    .s-skills-div-list{
+        padding: 0 5%;
+    }
+
+    .projects-list{
+        padding: 0 5%;
+    }
+
+    .in-projects{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 40svh;
+        column-gap: 10%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .links{
+        padding: 1% 5%;
+    }
+    .h-skills-div{
+        padding: 0 5%;
+    }
+
+    .h-skills-list a{
+        font-size: 16px;
+    }
+
+    title{
+        font-size: 20px;
+    }
+
+    .s-skills-div-list{
+        padding: 0 5%;
+    }
+    .s-skills-p{
+        font-size: 15px;
+    }
+
+    .s-skills-logo p{
+        font-size: 40px;
+    }
+
+    .projects-list{
+        padding: 0 5%;
+    }
+
+    .in-projects{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 40svh;
+        column-gap: 10%;
+    }
+}
+
+@media screen and (min-width: 300px){
+    section{
+        overflow-x: hidden;
+    }
+    .intro{
+        font-size: 20px;
+    }
+    .links{
+        padding: 1% 2%;
+    }
+    .bio{
+        font-size: 24px;
+    }
+
+    .about-me-text{
+        font-size: 20px;
+    }
+    .h-skills-div{
+        padding: 0 5%;
+        font-size: 20px;
     }
 
     .s-skills-div-list{
