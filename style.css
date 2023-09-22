@@ -12,7 +12,6 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
 }
-
 a{
     text-decoration: none;
 }
@@ -83,6 +82,7 @@ header{
     width: 100%;
     height: 100svh;
     position: relative;
+    overflow: hidden;
 }
 
 .header-bg{
@@ -110,6 +110,7 @@ header{
 
 .links a{
     position: relative;
+    height: 4%;
 }
 
 .links a:after{
@@ -128,6 +129,41 @@ header{
 .links a:hover:after{
     opacity: 1;
 }
+
+.menu{
+    position: absolute;
+    height: 5svh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 3%;
+    z-index: 100000;
+}
+
+.btn-menu{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.show-links{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    overflow-y: hidden;
+}
+
+/* .show-links::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.25);
+} */
 
 .main-bio{
     display: grid;
@@ -164,6 +200,7 @@ header{
     position: relative;
     top: 0;
     bottom: 0;
+    overflow-x: hidden;
 }
 
 .about-me-bg{
@@ -204,6 +241,7 @@ header{
     height: 100svh;
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .h-skills-bg{
@@ -245,6 +283,7 @@ header{
     width: 100%;
     position: relative;
     top: 0;
+    overflow-x: hidden;
 }
 
 .s-skills-bg{
@@ -321,6 +360,7 @@ header{
     display: grid;
     align-content: center;
     padding: 0 15%;
+    overflow-x: hidden;
 }
 
 .in-projects{
@@ -390,14 +430,27 @@ header{
 
     .in-projects{
         grid-template-columns: 45% 45%;
-        grid-template-rows: 40svh;
         column-gap: 10%;
+    }
+
+    .project img{
+        height: 40%;
     }
 }
 
 @media screen and (max-width: 450px){
+    .btn-menu{
+        display: block;
+    }
+    .hide{
+        transform: translateX(-200%);
+    }
     .links{
         padding: 1% 5%;
+    }
+    .about-me-text{
+        font-size: 20px;
+        width: 70%;
     }
     .h-skills-div{
         padding: 0 5%;
@@ -433,7 +486,7 @@ header{
     }
 }
 
-@media screen and (min-width: 300px){
+@media screen and (max-width: 300px){
     section{
         overflow-x: hidden;
     }
@@ -467,5 +520,37 @@ header{
         grid-template-columns: 45% 45%;
         grid-template-rows: 40svh;
         column-gap: 10%;
+    }
+}
+
+@media screen and (max-width: 290px){
+    .about-me-text{
+        font-size: 16px;
+    }
+    .h-skills-div{
+        display: flex;
+        flex-direction: column;            
+        justify-content: space-evenly;
+        text-align: left;
+        font-size: 12px;
+        height: 95%;
+    }
+    .h-skills-list{
+        width: 100%;
+    }
+    .h-title h3{
+        font-size: 20px;
+    }
+    .s-skills-div-list{
+        display: block;
+    }
+    .s-skills-logo{
+        display: none;
+    }
+    .in-projects{
+        grid-template-rows: 25svh;
+    }
+    .project p , .project a{
+        font-size: 12px;
     }
 }
