@@ -514,7 +514,7 @@ header{
         justify-content: space-evenly;
         text-align: left;
         font-size: 12px;
-        height: 95%;
+        height: 94%;
     }
     .h-skills-list{
         width: 100%;
@@ -548,8 +548,4 @@ header{
         grid-template-rows: 40svh;
         column-gap: 10%;
     }
-}
-
-@media screen and (max-width: 290px){
-    
 }
