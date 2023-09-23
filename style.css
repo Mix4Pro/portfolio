@@ -506,30 +506,6 @@ header{
     }
 
     .about-me-text{
-        font-size: 20px;
-    }
-    .h-skills-div{
-        padding: 0 5%;
-        font-size: 20px;
-    }
-
-    .s-skills-div-list{
-        padding: 0 5%;
-    }
-
-    .projects-list{
-        padding: 0 5%;
-    }
-
-    .in-projects{
-        grid-template-columns: 45% 45%;
-        grid-template-rows: 40svh;
-        column-gap: 10%;
-    }
-}
-
-@media screen and (max-width: 290px){
-    .about-me-text{
         font-size: 16px;
     }
     .h-skills-div{
@@ -558,4 +534,22 @@ header{
     .project p , .project a{
         font-size: 12px;
     }
+
+    .s-skills-div-list{
+        padding: 0 5%;
+    }
+
+    .projects-list{
+        padding: 0 5%;
+    }
+
+    .in-projects{
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 40svh;
+        column-gap: 10%;
+    }
+}
+
+@media screen and (max-width: 290px){
+    
 }
