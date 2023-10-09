@@ -132,6 +132,8 @@ header{
     opacity: 1;
 }
 
+
+
 .menu{
     position: absolute;
     height: 5svh;
@@ -139,7 +141,11 @@ header{
     align-items: center;
     width: 100%;
     padding-left: 3%;
-    z-index: 100000;
+    z-index: 1;
+}
+
+.appear{
+    display: none;
 }
 
 .btn-menu{
@@ -407,7 +413,6 @@ header{
 }
 
 @media screen and (max-width: 500px){
-
     .h-skills-div{
         padding: 0 5%;
     }
@@ -431,6 +436,9 @@ header{
 }
 
 @media screen and (max-width: 450px){
+    .appear{
+        display: flex;
+    }
     .btn-menu{
         display: block;
     }
